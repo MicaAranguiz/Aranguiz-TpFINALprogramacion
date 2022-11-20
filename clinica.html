@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica - Turnos </title>
+    <link rel="stylesheet" href="./clinica.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" id="todoelform">
+                <input type="text" name="nombre" id="nombre" class="form-control m-3" placeholder="Nombre del paciente">
+                <input type="text" name="apellido" id="apellido" class="form-control m-3" placeholder="Apellido del paciente">
+                <input type="text" name="dni" id="dni" class="form-control m-3" placeholder="Dni del paciente">
+                <p> Fecha de nacimiento del paciente</p>
+                <input type="date" name="fechanacimiento" id="fechanacimiento" class="form-control m-3"
+                    placeholder="Fecha de nacimiento del paciente">
+                    <p> Fecha del turno del paciente</p>
+                <input type="date" name="turno" id="turno" class="form-control m-3"
+                    placeholder="Horario y fecha del turno para el paciente">
+                <input type="text" name="obrasocial" id="obrasocial" class="form-control m-3" placeholder="Obra social del paciente">
+
+                <label for="doctor" id="opcioness">Elija un doctor</label>
+                <select id="doctor" class="form-select" aria-label="Default select example">
+                    <option value="Mariana">Mariana</option>
+                    <option value="Ariel">Ariel</option>
+                    <option value="Bianca">Bianca</option>
+                    <option value="Micaela">Micaela</option>
+                </select>
+                <br>
+                <button class="btn btn-success" onclick="ingresarPaciente()" id="botonenviar">Ingresar Paciente <i
+                        class="bi bi-wallet-fill"></i></button>
+            </div>
+            <div class="ol-4">
+                <div id="demo"></div>
+            </div>
+            <button onclick="mostrarlosPacientes()" class="btn btn-primary btn-block m-3" id="botonfinal">Mostrar
+                Pacientes</button>
+            <ul id="ul"></ul>
+            <button onclick="mostrarlosDoctores()" class="btn btn-primary btn-block m-3" id="botonfinal">Mostrar
+                Doctores</button>
+            <ul id="uld"></ul>
+        </div>
+    </div>
+    <script src="./clinica.js"></script>
+</body>
+
+</html>
