@@ -96,9 +96,9 @@ function mostrarlosPacientes() {
     } 
 }
 
-let doc1 = new Doctor('Mariana', 'Aranguiz', pacientes_mariana, 'Nacional', 'Pediatria');
-let doc2 = new Doctor('Ariel', 'Aranguiz', pacientes_ariel, 'Nacional', 'Cardiologo');
-let enf1 = new Enfermero('Bianca', 'Aranguiz', pacientes_bianca, 'Provincial', 'Enfermeria');
+let doc1 = new Doctor('Mariana', 'Aranguiz', pacientes_mariana, 'Nacional', 'Ginecología');
+let doc2 = new Doctor('Ariel', 'Aranguiz', pacientes_ariel, 'Nacional', 'Traumatólogo');
+let enf1 = new Enfermero('Bianca', 'Aranguiz', pacientes_bianca, 'Nacional', 'Enfermeria');
 let enf2 = new Enfermero('Micaela', 'Aranguiz', pacientes_micaela, 'Nacional', 'Enfermeria');
 var doctores = [doc1, doc2,enf1, enf2];
 
