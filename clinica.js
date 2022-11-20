@@ -6,27 +6,32 @@ class Profesional {
         this.paciente = paciente;
     }
 }
-
 class Enfermero extends Profesional {
     constructor(nombre, apellido, paciente, matricula, licenciatura) {
         super(nombre, apellido, paciente, matricula);
         this.licenciatura = licenciatura;
     }
     datosdeldoctor() {
-        return 'Nombre: ' + this.nombre + ' - Apellido: ' + this.apellido + ' - Pacientes: ' + this.paciente + ' - Matricula: ' + this.matricula + ' - Especialidad: ' + this.licenciatura;
+        return 'Nombre: ' + this.nombre + 
+        ' - Apellido: ' + this.apellido + 
+        ' - Matricula: ' + this.matricula + 
+        ' - Especialidad: ' + this.licenciatura +
+        ' - Pacientes que tiene: ' + this.paciente;
     }
 }
-
 class Doctor extends Profesional {
     constructor(nombre, apellido, paciente, matricula, especialidad) {
         super(nombre, apellido, paciente, matricula);
         this.especialidad = especialidad;
     }
     datosdeldoctor() {
-        return 'Nombre: ' + this.nombre + ' - Apellido: ' + this.apellido + ' - Pacientes: ' + this.paciente + ' - Matricula: ' + this.matricula + ' - Especialidad: ' + this.especialidad;
+        return 'Nombre: ' + this.nombre + 
+        ' - Apellido: ' + this.apellido + 
+        ' - Matricula: ' + this.matricula + 
+        ' - Especialidad: ' + this.especialidad +
+        ' - Pacientes que tiene: ' + this.paciente;
     }
 }
-
 class Paciente {
     constructor(nombrepac, apellidopac, dni, fechanacimiento, turno, obrasocial, Doctor) {
         this.nombrepac = nombrepac;
@@ -38,7 +43,13 @@ class Paciente {
         this.Doctor = Doctor;
     }
     datosdelpaciente() {
-        return 'Nombre: ' + this.nombrepac + '- Apellido: ' + this.apellidopac + ' - DNI: ' + this.dni + ' - Fecha de Nacimiento: ' + this.fechanacimiento + ' - Turno: ' + this.turno + ' - Obra Social: ' + this.obrasocial + ' - Doctor: ' + this.Doctor;
+        return 'Nombre: ' + this.nombrepac + 
+        '- Apellido: ' + this.apellidopac + 
+        ' - DNI: ' + this.dni + 
+        ' - Fecha de Nacimiento: ' + this.fechanacimiento + 
+        ' - Obra Social: ' + this.obrasocial +
+        ' - Doctor que lo atiende: ' + this.Doctor +
+        ' - Turno: ' + this.turno;
     }
 }
 
@@ -57,26 +68,22 @@ function ingresarPaciente() {
     let obrasocial = document.getElementById("obrasocial").value
     let Doctor = document.getElementById("doctor").value
     let paciente = new Paciente(nombre, apellido, dni, fechanacimiento, turno, obrasocial, Doctor) 
-    
     switch (Doctor) {
         case 'Mariana':
-            pacientes_mariana.push(paciente.apellido,paciente.turno);
+            pacientes_mariana.push(paciente.apellidopac);
             break;
         case 'Ariel':
-            pacientes_ariel.push(paciente.apellido);
+            pacientes_ariel.push(paciente.apellidopac);
             break;
         case 'Bianca':
-            pacientes_bianca.push(paciente.apellido);
+            pacientes_bianca.push(paciente.apellidopac);
             break;
         case 'Micaela':
-            pacientes_micaela.push(paciente.apellido);
+            pacientes_micaela.push(paciente.apellidopac);
             break;
     }
     pacientes.push(paciente)
-    console.log(doctores)
-    
 }
-
 function mostrarlosPacientes() {
     let ul = document.getElementById("ul")
     if (ul.value !== "") {
@@ -95,7 +102,6 @@ let enf1 = new Enfermero('Bianca', 'Aranguiz', pacientes_bianca, 'Provincial', '
 let enf2 = new Enfermero('Micaela', 'Aranguiz', pacientes_micaela, 'Nacional', 'Enfermeria');
 var doctores = [doc1, doc2,enf1, enf2];
 
-
 function mostrarlosDoctores() {
     let ul = document.getElementById("uld")
     if (ul.value !== "") {
@@ -107,10 +113,6 @@ function mostrarlosDoctores() {
         }
     }
 }
-
-console.log(pacientes)
-
-
 class Clinica {
     constructor(nombre, dueño, respjur, doctores, enfermeros) {
         this.nombre = nombre;
