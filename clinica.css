@@ -5,6 +5,7 @@
 #opcioness{
     margin-left:45%;
     margin-bottom:20px;
+    color:white;
 }
 #botonenviar{
     margin-left:38%;
@@ -28,4 +29,12 @@ body{
 }
 p{
     text-align: center;
+    color:white;
+}
+h1{
+    text-align: center;
+    font-weight: 900 !important;
+}
+button{
+    background-color: rgb(31, 129, 241) !important;
 }
