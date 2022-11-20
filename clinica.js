@@ -85,7 +85,7 @@ function ingresarPaciente() {
     pacientes.push(paciente)
 }
 function mostrarlosPacientes() {
-    let ul = document.getElementById("ul")
+    let ul = document.getElementById("ulpac")
     if (ul.value !== "") {
         ul.innerHTML = ""
         for (const item of pacientes) {
@@ -103,7 +103,7 @@ let enf2 = new Enfermero('Micaela', 'Aranguiz', pacientes_micaela, 'Nacional', '
 var doctores = [doc1, doc2,enf1, enf2];
 
 function mostrarlosDoctores() {
-    let ul = document.getElementById("uld")
+    let ul = document.getElementById("uldoc")
     if (ul.value !== "") {
         ul.innerHTML = ""
         for (const item of doctores) {
